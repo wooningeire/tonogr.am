@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("fonts/SpaceGrotesk[wght].woff2") format('woff2');
+}
+@font-face {
+    font-family: "Remix Icon Custom";
+    src: url("fonts/RemixIconCustom-Regular.woff2") format('woff2');
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --purple: #9FA2BF;
+    --pink: #F8A1EC;
+    --yellow: #F8E986;
+    --green: #A1E68C;
+    --white: #F2F2F2;
+    --white-transparent: #F2F2F280;
+    --black: #1A1A1A;
+}
+
+@keyframes rainbow {
+    0% { color: var(--purple); fill: var(--purple); }
+   25% { color: var(--pink); fill: var(--pink); }
+   50% { color: var(--yellow); fill: var(--yellow); }
+   75% { color: var(--green); fill: var(--green); }
+  100% { color: var(--purple); fill: var(--purple); }
+}
+
+body {
+    background-color: var(--black);
+    font-family: "Space Grotesk";
+    color: var(--black);
+}
+
+p {
+    font-feature-settings: 'ss02', 'ss03', 'ss04', 'case', 'zero';
+    text-align: justify;
+}
+
+.fullscreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+main {
+    background-color: #FFFFFF80;
+    backdrop-filter: blur(8px);
+    border: solid 2px #FFFFFF80;
+    border-radius: 0.5em;
+    padding: 2em;
+    min-width: 250px;
+    max-width: 50vw;
+}
+
+#links {
+    font-family: "Remix Icon Custom";
+    font-size: 2em;
+    justify-content: flex-end;
+}
+
+#links a {
+    text-decoration: none;
+    color: var(--purple);
+    animation: 3s infinite rainbow;
+    transition: 200ms;
+}
+
+#links a:not(:hover) {
+    filter: brightness(1.903) brightness(0.949);
+}
+
+div.link {
+    background-color: var(--black);
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+}
+
+main p {
+    margin: 1em 0 1em 0;
+}
